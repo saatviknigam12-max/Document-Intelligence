@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Document Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDE -->
+  <div class="left card">
+    <h2>⚙️ Settings</h2>
+
+    <input id="endpoint" placeholder="Azure Endpoint">
+    <input id="apiKey" placeholder="API Key">
+
+    <div class="upload-box">
+      <input type="file" id="file">
+      <p>📂 Click to Upload File</p>
+    </div>
+
+    <div id="preview"></div>
+
+    <div id="fileInfo" class="file-info">No file selected</div>
+
+    <button onclick="analyze()">Analyze</button>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right">
+
+    <div class="card">
+      <h2>📄 Extracted Text</h2>
+      <pre id="result">Your result will appear here...</pre>
+    </div>
+
+    <div class="card">
+      <h2>🕘 History</h2>
+      <input id="search" placeholder="🔍 Search history..." oninput="searchHistory()">
+      <button onclick="clearHistory()">Clear History</button>
+      <ul id="historyList"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
